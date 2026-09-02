@@ -19,12 +19,19 @@ StudyPal is an intelligent, RAG‑powered study assistant designed for Class 12 
 🛠️ Tech Stack
 
 Frontend	- Streamlit
+
 LLM	 - Groq 
+
 Embeddings	- HuggingFace (all‑mpnet‑base‑v2 – 768‑dim)
+
 Vector Store	- Chroma 
+
 Document Processing	- UnstructuredFileLoader, RecursiveCharacterTextSplitter
+
 Video Search	- YouTubeSearch, Python
+
 Orchestration	- LangChain 
+
 Language	- Python 3.12
 
 
