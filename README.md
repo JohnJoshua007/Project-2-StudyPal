@@ -16,6 +16,7 @@ StudyPal is an intelligent, RAG‑powered study assistant designed for Class 12 
 
 ⚡ Fast & Lightweight – Powered by Groq's lightning‑fast inference with local HuggingFace embeddings.
 
+
 🛠️ Tech Stack
 
 Frontend	- Streamlit
@@ -33,6 +34,27 @@ Video Search	- YouTubeSearch, Python
 Orchestration	- LangChain 
 
 Language	- Python 3.12
+
+
+🧠 How It Works
+
+Document Ingestion – PDF textbooks are loaded, split into chunks (2000 chars, 500 overlap), and embedded using HuggingFace embeddings.
+
+Vector Storage – Chroma stores embeddings with 768‑dimension vectors.
+
+Query Processing – When you ask a question:
+
+The query is embedded.
+
+Relevant chunks are retrieved using MMR (Maximum Marginal Relevance) to ensure diversity.
+
+The context, chat history, and query are sent to Groq LLM.
+
+The model generates a grounded answer.
+
+Video Suggestions – Your chat history is used to search YouTube for 3 relevant videos.
+
+
 
 
 
