@@ -15,7 +15,13 @@ data_dir = f"{parent_dir}/data"
 vector_db_dir = f"{parent_dir}/vector_db"
 chapters_vector_db_dir = f"{parent_dir}/chapters_vector_db"
 
-embedding = HuggingFaceEmbeddings(model_kwargs={"device": DEVICE}) # Use device from env
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+
+embedding = HuggingFaceEmbeddings(
+    model_name=EMBEDDING_MODEL,
+    model_kwargs={"device": DEVICE},
+    encode_kwargs={"device": DEVICE},   # also set for encoding
+)
 text_splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=500)
 
 
